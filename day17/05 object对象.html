@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var info = {
+        "name": "yuan",
+        age:18,
+        gf:{
+            name:"高圆圆",
+            age:32,
+            job:"演员"
+        },
+        sing:function (){
+            console.log("洪亮的吼叫！")
+        },
+        introduce:function (){
+            // console.log("my name is "+this.name+", my age is "+this.age+"!")
+            console.log(`my name is ${this.name}, my age is ${this.age}!`)
+        }
+    }
+    console.log(info)
+    console.log(info["name"])
+    console.log(info["gf"])
+    console.log(info["gf"]["name"])
+    console.log(info.name)
+    console.log(info.gf.job)
+
+    info.sing()
+    info.introduce()
+
+    info.age = 18
+    console.log(info)
+
+    // json
+
+    data = {
+        username: "yuan",
+        password: "123456"
+    }
+
+    var data_json = JSON.stringify(data)
+    console.log(data_json)
+
+    var res_json = '{"code":1001, "msg":"登录成功”}'
+    var res_object = JSON.parse(res_json)
+    console.log(res_object)
+    console.log(res_object.code)
+
+
+</script>
+</body>
+</html>

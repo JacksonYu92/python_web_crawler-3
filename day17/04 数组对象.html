@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [100, 200, 300]
+    arr.forEach(function (item) {
+        console.log(item * 2)
+    })
+    console.log(arr)
+
+    var arr = [2, 12, 3]
+    var ret = arr.map(function (item){
+        return item*item
+    })
+    console.log(ret)
+
+    var arr2 = arr.filter(function (item){
+        return false
+    }) // []
+
+    var arr2 = arr.filter(function (item){
+        return item % 2 === 0
+    })
+    console.log(arr2)
+
+</script>
+</body>
+</html>
