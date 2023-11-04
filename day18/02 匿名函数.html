@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+      function  foo(){
+        console.log("函数执行")
+      }
+      var bar = foo
+      bar()
+
+      var add = function (x,y) {
+          console.log(x+y)
+      }
+      add(1,2)
+
+      (function (x,y) {
+          console.log(x + y)
+      })(2,4)
+
+      function foo(){
+          return function (){
+              console.log("inner函数")
+          }
+      }
+
+      var ret = foo()
+      //console.log(ret)
+      ret()
+
+      function foo() {
+          console.log("foo功能！")
+      }
+
+      function bar() {
+          console.log("bar功能！")
+      }
+
+      function log(f){
+          f()
+          console.log("日志打印")
+      }
+
+      log(foo)
+      log(bar)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

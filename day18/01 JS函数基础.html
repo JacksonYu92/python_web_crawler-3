@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function foo() {
+            console.log("foo函数执行")
+        }
+
+        foo()
+
+        function add(x, y) {
+            console.log(x + y)
+        }
+
+        add(10, 20)
+
+        function add2() {
+            console.log(arguments)
+            var ret = 0
+            for (var i = 0; i < arguments.length; i++) {
+                ret += arguments[i]
+            }
+            console.log(ret)
+        }
+
+        add2(10, 20, 30)
+
+        function add3(x,y) {
+            var ret = x + y
+            return ret
+        }
+
+        var result = add3(1,2)
+        console.log(result)
+
+        function test01() {
+            console.log("test01")
+            return 10
+        }
+
+        function test02() {
+            console.log("test01")
+            return 20
+        }
+
+        function test03() {
+            console.log("test01")
+            return 30
+        }
+
+        function handle() {
+            return x = test01() + 100, y = test02() + x, test03() + y
+        }
+
+        console.log(handle())
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

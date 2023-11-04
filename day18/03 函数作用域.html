@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var z = 1000
+        function foo() {
+            var x = 10
+            var y = 20
+            console.log("foo x:", x)
+            console.log("foo y:", y)
+            console.log("foo z:", z)
+        }
+
+        foo()
+
+        console.log(x,y)
+
+
+        var x = 1000
+
+        function test01() {
+            var x = 100
+
+            function test02() {
+                var x = 10
+                console.log("X:", x)
+            }
+            test02()
+        }
+        test01()
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
