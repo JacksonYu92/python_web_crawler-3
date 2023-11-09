@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function A(){
+            var data = '{"data":"加密数据"}'
+            console.log("A执行")
+            B(data)
+        }
+        function B(data){
+            data += "!!!"
+            console.log("B执行")
+            C(data)
+        }
+        function C(data){
+            console.log("C执行")
+            D(data)
+        }
+        function D(data){
+            console.log("D执行")
+            E(data)
+        }
+        function E(data){
+            console.log("E执行")
+            F(data)
+        }
+        function F(data){
+            console.log("F执行")
+            console.log("向服务器发起ajax请求",data)
+        }
+        A()
+    </script>
+</head>
+<body>
+
+</body>
+</html>
