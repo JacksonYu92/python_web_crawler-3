@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        function A(){
+            var p = new Promise(function (resolve, reject){
+                setTimeout(function (){
+                    console.log("A请求")
+                    var res = "A-data"
+                    resolve(res)
+                }, 1000)
+            })
+            return p
+        }
+
+        function B(){
+            return new Promise(function (resolve, reject){
+                setTimeout(function (){
+                    console.log("B请求")
+                    var res = "B-data"
+                    resolve(res)
+                }, 2000)
+            })
+        }
+
+        function C(){
+            return new Promise(function (resolve, reject){
+                setTimeout(function (){
+                    console.log("C请求")
+                    var res = "C-data"
+                    resolve(res)
+                }, 3000)
+            })
+        }
+
+        // var p1 = A()
+        //
+        // var p2 = p1.then(function (res){
+        //     console.log("A获取结果: ",res)
+        //     return B()
+        //
+        // })
+        //
+        // var p3 = p2.then(function (res){
+        //     console.log("B获取结果: ",res)
+        //     return C()
+        // })
+        //
+        // p3.then(function (res){
+        //     console.log("C获取结果: ",res)
+        // })
+
+        A().then(function (res){
+            console.log("A获取结果: ",res)
+            return B()
+        }).then(function (res){
+            console.log("B获取结果: ",res)
+            return C()
+        }).then(function (res){
+            console.log("C获取结果: ",res)
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

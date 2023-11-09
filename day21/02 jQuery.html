@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+</head>
+<body>
+
+<div id="i1" class="c1">Alex</div>
+
+<script>
+    // $("选择器").操作标签的方法
+    $(".c1").click(function () {
+        // this:正在触发事件标签
+        console.log("this:::", this)
+        $(this).css("color", "green")
+    })
+</script>
+
+</body>
+</html>

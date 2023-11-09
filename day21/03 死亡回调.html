@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        setTimeout(function () {
+            // 请求数据
+            console.log("A操作")
+            setTimeout(function () {
+                console.log("B操作")
+                setTimeout(function () {
+                    console.log("C操作")
+                }, 1000)
+                console.log("B的后续操作")
+            }, 2000)
+            console.log("A的后续操作")
+        }, 3000)
+        console.log("后续操作")
+
+
+
+        // $.ajax({
+        //     url:"请求1",
+        //     success:function (res){
+        //         console.log("处理请求1的数据")
+        //         $.ajax({
+        //              url:"请求2",
+        //              success:function (res){
+        //                  console.log("处理请求2的数据")
+        //              }
+        //         })
+        //     }
+        // })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        function sayHi(){
+            // 模拟的ajax的异步操作
+            return new Promise(function (resolve, reject){
+                setTimeout(function (){
+                    var res = "hello world"
+                    console.log(res)
+                    resolve(res)
+                }, 1000)
+            })
+        }
+
+        var p = sayHi()
+        p.then(function (res){
+            console.log("获取结果: ",res)
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
