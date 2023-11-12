@@ -1,0 +1,19 @@
+一、请求加密数据的破解：
+
+1. request call stack
+2. 关键字：key关键字，路径关键字
+3. 关键字：interceptor
+
+o['a'+'n'+'a'+'lysis'] = fn()
+
+二、响应解密数据的位置破解
+
+Ajax 【JS, jQuery, vue】：
+
+$.ajax({
+    url:"",
+    data:{},
+    success:function(){
+
+    }
+})
