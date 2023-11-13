@@ -1,6 +1,9 @@
 import requests
 import time
 import execjs
+from Crypto.Cipher import AES
+import base64
+
 # t = str(int(time.time() * 1000))
 # print(t)
 
@@ -30,4 +33,15 @@ data = {
 url = "https://api.birdreport.cn/front/activity/search"
 
 res = requests.post(url=url, data=data, headers=headers)
-print(res.json())
+res_json = res.json()
+base64_enc_data = res.json().get("data")
+
+# 解码并解密：
+key = '3583ec0257e2f4c8195eec7410ff1619'.encode()
+iv = 'd93c0d5ec6352f20'.encode()
+
+aes = AES.new(key, AES.MODE_CBC, iv)
+enc_data = base64.b64decode(base64_enc_data)
+# print(ret)
+data = aes.decrypt(enc_data).decode()
+print(data)
